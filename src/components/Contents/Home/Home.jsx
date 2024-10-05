@@ -9,7 +9,7 @@ function Home({ currentTheme }) {
             <div className="container-fluid">
                 <img src={ImgBackground} alt="background" className='background' />
                 <div className="content">
-                    <h1>Lê Phạm Trường Huy</h1>
+                    <h1>Le Pham Truong Huy</h1>
                     <div className="animation-container">
                         <TypeAnimation
                             sequence={[
