@@ -1,6 +1,5 @@
 import { Row, Col } from "antd";
-import PropTypes from 'prop-types'
-
+import PropTypes from 'prop-types';
 import './Header.scss';
 
 function Header({ toggleTheme, currentTheme }) {
@@ -16,20 +15,20 @@ function Header({ toggleTheme, currentTheme }) {
                 <a href="#resume">Resume</a>
                 <a href="#contact">Contact</a>
             </Col>
+
             <Col flex={2} className="theme-switch">
-                <label htmlFor="theme-switch" className="switch">
-                    <input
-                        id="theme-switch"
-                        type="checkbox"
-                        onChange={toggleTheme}
-                        checked={currentTheme === 'light-theme'}
-                    />
-                    <span className="slider"></span>
-                    <span className="moon"></span>
-                    <span className="sun"></span>
+                <input
+                    type="checkbox"
+                    className="theme-checkbox"
+                    id="theme-toggle"
+                    checked={currentTheme === 'dark-theme'}
+                    onChange={toggleTheme}
+                />
+                <label htmlFor="theme-toggle" className="theme-label">
+                    <span className="sr-only">Toggle theme</span>
                 </label>
             </Col>
-        </Row >
+        </Row>
     );
 }
 
