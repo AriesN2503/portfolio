@@ -6,7 +6,7 @@ import scrollToPath from "../../scrollToPath";
 function Header({ toggleTheme, currentTheme }) {
     const handleScroll = (e, path) => {
         e.preventDefault();
-        scrollToPath(path); 
+        scrollToPath(path);
     };
 
     return (
@@ -18,7 +18,7 @@ function Header({ toggleTheme, currentTheme }) {
             <Col flex={10} className="items" align="center">
                 <a href="#home" onClick={(e) => handleScroll(e, "home")}>Home</a>
                 <a href="#about" onClick={(e) => handleScroll(e, "about")}>About</a>
-                <a href="#resume" onClick={(e) => handleScroll(e, "resume")}>Resume</a>
+                {/* <a href="#resume" onClick={(e) => handleScroll(e, "resume")}>Resume</a> */}
                 <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>Contact</a>
             </Col>
 

@@ -1,8 +1,7 @@
-import "./Footer.scss";
-import { Link } from "react-router-dom";
 import { Icon } from '@iconify/react';
 import PropTypes from "prop-types";
 import scrollToPath from "../../scrollToPath";
+import "./Footer.scss";
 
 function Footer({ currentTheme }) {
 
@@ -27,11 +26,11 @@ function Footer({ currentTheme }) {
                                              <a href="#about" onClick={(e) => handleScroll(e, "about")}>About</a>
                                         </h6>
                                    </div>
-                                   <div className="link-item">
+                                   {/* <div className="link-item">
                                         <h6>
                                              <a href="#resume" onClick={(e) => handleScroll(e, "resume")}>Resume</a>
                                         </h6>
-                                   </div>
+                                   </div> */}
                                    <div className="link-item">
                                         <h6>
                                              <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>Contact</a>
@@ -46,10 +45,18 @@ function Footer({ currentTheme }) {
                               </p>
                          </section>
                          <section className="social-icons">
-                              <Link to="" className="icon"><Icon icon="fe:facebook" /></Link>
-                              <Link to="" className="icon"><Icon icon="mdi:instagram" /></Link>
-                              <Link to="" className="icon"><Icon icon="uil:linkedin" /></Link>
-                              <Link to="" className="icon"><Icon icon="uiw:github" /></Link>
+                              <a href="https://www.facebook.com/truonghuy.le.167/" className="icon" target="_blank" rel="noopener noreferrer">
+                                   <Icon icon="fe:facebook" />
+                              </a>
+                              <a href="https://www.instagram.com/truong_huy2503/" className="icon" target="_blank" rel="noopener noreferrer">
+                                   <Icon icon="mdi:instagram" />
+                              </a>
+                              <a href="https://www.linkedin.com/in/tr%C6%B0%E1%BB%9Dng-huy-l%C3%AA-ph%E1%BA%A1m-884496256/" className="icon" target="_blank" rel="noopener noreferrer">
+                                   <Icon icon="uil:linkedin" />
+                              </a>
+                              <a href="https://github.com/AriesN2503" className="icon" target="_blank" rel="noopener noreferrer">
+                                   <Icon icon="uiw:github" />
+                              </a>
                          </section>
                     </div>
                     <div className="footer-bottom">
