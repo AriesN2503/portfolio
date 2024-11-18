@@ -1,34 +1,37 @@
-import ImgBackground from '../../../assets/Photos/Background/Background3.jpg'
-import PropTypes from 'prop-types'
-import { TypeAnimation } from 'react-type-animation';
-import './Home.scss'
+import ImgBackground from "../../../assets/Photos/Background/Background3.jpg";
+import PropTypes from "prop-types";
+import { TypeAnimation } from "react-type-animation";
+import "./Home.scss";
+import scrollToPath from "../../../scrollToPath";
 
 function Home({ currentTheme }) {
+
     return (
-        <div className={`home ${currentTheme}`}>
-            <div className="container-fluid">
-                <img src={ImgBackground} alt="background" className='background' />
+        <div className={`home ${currentTheme}`} id="home">
+            <img src={ImgBackground} alt="Background illustration" className="background" />
+            <div className="container">
                 <div className="content">
                     <h1>Le Pham Truong Huy</h1>
+                    {/* Typing Animation */}
                     <div className="animation-container">
                         <TypeAnimation
                             sequence={[
-                                'Font-End Developer',
-                                10000,
-                                '',
-                                500,
+                                "Front-End Developer", // First text
+                                10000, // Pause for 2s
+                                "", // Clear the text
+                                500, // Pause for 0.5s
                             ]}
                             wrapper="span"
-                            speed={30}
+                            speed={40}
                             repeat={Infinity}
                         />
                     </div>
+                    {/* Navigation Buttons */}
                     <div className="button">
-                        <a href='#about'><button>About</button></a>
-                        <a href="#resume"><button>Resume</button></a>
+                        <button onClick={() => scrollToPath("about")}>About</button>
+                        <button onClick={() => scrollToPath("resume")}>Resume</button>
                     </div>
                 </div>
-
             </div>
         </div>
     );

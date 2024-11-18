@@ -1,0 +1,65 @@
+@import '../../../variables';
+
+.about {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: $bg-primary;
+    width: 100%;
+    color: $text-primary;
+    transition: 0.5s;
+    padding-top: 2rem;
+
+    .container {
+        max-width: 70%;
+        margin: 0 auto;
+
+        .content {
+
+            .title-about {
+                margin: 0 auto;
+                text-align: center;
+                padding-top: 2rem;
+
+                font: {
+                    size: 3rem;
+                    weight: 700;
+                }
+
+                text-shadow: 3px 3px 6px $text-shadow;
+            }
+
+            .content-about {
+                margin-top: 2.5rem;
+
+                .content-about-image {
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .avatar-img {
+                        width: 100%;
+                        height: auto;
+                        border: 0.5px solid $text-primary;
+                        border-radius: 10%;
+                    }
+
+                    .ant-image-mask {
+                        border-radius: 10%;
+                        overflow: hidden;
+                    }
+                }
+
+                .content-about-text {
+                    height: 25rem;
+
+                    p {
+                        padding-top: 1rem;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

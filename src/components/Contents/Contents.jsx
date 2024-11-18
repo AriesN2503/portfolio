@@ -1,9 +1,14 @@
+import PropTypes from 'prop-types';
+import About from "./About/About";
 import Home from "./Home/Home";
-import PropTypes from 'prop-types'
+import './Contents.scss'
 
 function Contents({ currentTheme }) {
     return <>
-        <Home currentTheme={currentTheme} />
+        <div className={`contents ${currentTheme}`}>
+            <Home currentTheme={currentTheme} />
+            <About currentTheme={currentTheme} />
+        </div>
     </>;
 
 }
